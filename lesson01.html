@@ -110,8 +110,8 @@
 <br>
 
 <!--------------------------------------------------------------------------------------->
- <ul><li>二方向以外に分岐するプログラム</li></ul>
-    　　　年齢に応じて金額を判定する。<br>
+ <ul><li>多方向に分岐するプログラム</li></ul>
+    　　　年齢に応じて入場料金を判定する。<br>
 <!--------------------------------------------------------------------------------------->
   <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0;">
   <tr>
@@ -126,11 +126,13 @@
   width: 100%;
   max-width: 800px;
   overflow: auto;">
-<pre style="margin: 0;"><code>(1) kazu = 17
-(2) if kazu % 2 == 0:
-(3)   print('偶数') #printの前にはインデントを入れる
-(4) else:
-(5)   print('奇数')</code></pre>
+<pre style="margin: 0;"><code>(1) nenrei = 18
+(2) if nenrei < 12:
+(3)   print('子供料金') #printの前にはインデントを入れる
+(4) elseif nenrei < 60:
+(5)   print('大人料金')
+(6) else:
+(7)   print('シニア料金')</code></pre>
 </div> </tr>
 </table>
 <br>
