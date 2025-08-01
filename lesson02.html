@@ -82,15 +82,62 @@
     </td>
   </tr>
 </table>
- 
-  
-
 <br>
 <!--------------------------------------------------------------------------------------->
-<!--
- <ul><li>代金の計算を行うプログラム１</li></ul>
-  　　　2000円の代金から10パーセント引きした金額を表示する<br>
+ <ul><li>NumPyの配列におけるインデックス操作はとても重要</li></ul>
+  　　　多様な方法で配列の特定の要素を参照・操作できます。<br>
 <!--------------------------------------------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np
+
+(2) # 1. 基本のインデックス指定（添字）
+(3) arr = np.array([10, 20, 30, 40])
+(4) print(arr[0])  # 10
+(5) print(arr[3])  # 40
+
+(6) # 2. スライス（範囲指定）
+(7) arr = np.array([10, 20, 30, 40, 50])
+(8) print(arr[1:4])  # [20 30 40]
+(9) print(arr[:3])   # [10 20 30]
+(10) print(arr[::2])  # [10 30 50]
+
+(11) # 3. 多次元配列のインデックス
+(12) arr2d = np.array([[1, 2, 3],
+(13)                   [4, 5, 6]])
+(14) print(arr2d[0, 1])  # 2（0行1列）
+(15) print(arr2d[1, :])  # [4 5 6]
+
+(16) # 4. ブールインデックス（条件で抽出）
+(17) arr = np.array([10, 15, 20, 25])
+(18) mask = arr > 15
+(19) print(arr[mask])  # [20 25]
+(20) print(arr[arr > 15])  # [20 25]
+
+(21) # 5. 整数配列による複数インデックス指定
+(22) arr = np.array([10, 20, 30, 40, 50])
+(23) indices = [1, 3]
+(24) print(arr[indices])  # [20 40]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
+  
 <!--
   <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0;">
   <tr>
