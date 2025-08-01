@@ -134,8 +134,112 @@
     </td>
   </tr>
 </table>
+<br>
 
+<!--------------------------------------------------------------------------------------->
+ <ul><li>NumPy配列では、四則演算（+ − × ÷）を要素ごとに簡単に実行できます</li></ul>
+  　　　これを「要素ごとの演算（element-wise operation）」といいます。<br>
+<!--------------------------------------------------------------------------------------->
+  
+<h1> 配列の四則演算</h1>
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np
+(2) 
+(3) a = np.array([1, 2, 3])
+(4) b = np.array([10, 20, 30])
+(5) 
+(6) print(a + b)  # 足し算 → [11 22 33]
+(7) print(a - b)  # 引き算 → [-9 -18 -27]
+(8) print(a * b)  # 掛け算 → [10 40 90]
+(9) print(b / a)  # 割り算 → [10. 10. 10.]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
 
+<h2> 配列とスカラーの演算（ブロードキャスト）</h2>
+
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) print(a + 5)  # [6 7 8]
+(2) print(b * 2)  # [20 40 60]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h2> 注意：配列の形が一致しないとエラー</h2>
+
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) a = np.array([1, 2, 3])
+(2) c = np.array([4, 5])
+(3) # print(a + c)  → エラー（形が一致しない）
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h2> 実践例：1〜5の2乗</h2>
+
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) arr = np.array([1, 2, 3, 4, 5])
+(2) print(arr ** 2)  # [1 4 9 16 25]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+  
 
   
 <!--
