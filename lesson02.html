@@ -46,33 +46,44 @@
     <li>配列や行列を数学的に扱うのがとても楽</li>
     <li>機械学習やAIなどの分野ではほぼ必須のライブラリ</li>
   </ul>
-
-
-
+<br>
   
 <!--------------------------------------------------------------------------------------->
- <ul><li>Pythonを使うメリット</li></ul>
+ <ul><li>ndim は NumPy配列の形の「次元数（軸の数）」を返す</li></ul>
 <!--------------------------------------------------------------------------------------->
-  
-  <!--
-  <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0;">
+  table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0;">
   <tr>
-  <div style="
-  background-color: #f7f7f8;
-  color: #333;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 12px;
-  border-radius: 6px;
-  width: 100%;
-  max-width: 800px;
-  overflow: auto;">
-<pre style="margin: 0;"><code>(1) zikoku = 18
-(2) yotei = '勉強'
-(3) print(zikoku, '時から', yotei)</code></pre>
-</div> </tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        max-width: 800px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np
+(2) 
+(3) a = np.array(10)
+(4) print(a.ndim)  # 出力: 0（スカラー）
+(5) 
+(6) b = np.array([1, 2, 3])
+(7) print(b.ndim)  # 出力: 1（一次元）
+(8) 
+(9) c = np.array([[1, 2, 3], [4, 5, 6]])
+(10) print(c.ndim)  # 出力: 2（行列）
+(11) 
+(12) d = np.array([[[1], [2]], [[3], [4]]])
+(13) print(d.ndim)  # 出力: 3（三次元）</code></pre>
+      </div>
+    </td>
+  </tr>
 </table>
+ 
+  
 
 <br>
 <!--------------------------------------------------------------------------------------->
