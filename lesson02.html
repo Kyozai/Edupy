@@ -388,7 +388,90 @@
 </td></tr>
 </table>
 
+<h1>>配列の統計量の計算</h1>
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>平均（np.mean()）</li></ul>
+ <!--------------------------------------------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np
+(2)
+(3) data = np.array([10, 20, 30, 40, 50])
+(4) 
+(5) avg = np.mean(data)
+(6) print(avg)  # 出力: 30.0
+</code></pre>
+</div>
+</td></tr>
+</table>
 
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>2次元配列の平均</li></ul>
+ <!--------------------------------------------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np
+(2)
+(3) arr = np.array([[10, 20, 30],
+(4)                 [40, 50, 60],
+(5)                 [70, 80, 90]])
+(6)
+(7) # 行方向（横）の平均：各行ごとの平均を求める
+(8) row_mean = np.mean(arr, axis=1)
+(9) print(row_mean)  # 出力: [20. 50. 80.]
+</code></pre>
+</div>
+</td></tr>
+</table>
+
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>補足：列方向の平均を求めたい場合</li></ul>
+ <!--------------------------------------------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) col_mean = np.mean(arr, axis=0)
+(2) print(col_mean)  # 出力: [40. 50. 60.]
+</code></pre>
+</div>
+</td></tr>
+</table>
+
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>分散（np.var()）</li></ul>
+ <!--------------------------------------------------------------------------------------->  
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) var = np.var(data)
+(2) print(var)  # 出力: 200.0
+</code></pre>
+</div>
+</td></tr>
+</table>
+
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li> 標準偏差（np.std()）</li></ul>
+ <!--------------------------------------------------------------------------------------->  
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) std = np.std(data)
+(2) print(std)  # 出力: 14.1421356237...
+</code></pre>
+</div>
+</td></tr>
+</table>
+
+
+
+
+  
+  
+  
+  
 <!--
   <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0;">
   <tr>
