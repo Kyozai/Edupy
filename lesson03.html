@@ -460,6 +460,51 @@ max    90.000000  88.000000  95.000000
 </pre>
 </div>
              
+ <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>欠損値の確認、補完、削除</li></ul>
+<!---------------------------------------------------------------------------------------> 
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) import numpy as np
+(3) 
+(4) # サンプルデータ作成（欠損値 NaN を含む）
+(5) df = pd.DataFrame({
+(6)     '名前': ['太郎', '花子', '次郎', '三郎'],
+(7)     '国語': [80, np.nan, 85, 90],
+(8)     '数学': [70, 88, np.nan, 75],
+(9)     '英語': [75, 95, 80, np.nan]
+(10) })
+(11) 
+(12) # 欠損値の確認
+(13) print(df.isnull())          # Trueが欠損値の場所
+(14) print(df.isnull().sum())    # 各列の欠損値の数
+(15) 
+(16) # 欠損値の補完（例：平均値で補完）
+(17) df_filled = df.fillna(df.mean(numeric_only=True))
+(18) print(df_filled)
+(19) 
+(20) # 欠損値を含む行の削除
+(21) df_dropped = df.dropna()
+(22) print(df_dropped)
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
   
 
   
