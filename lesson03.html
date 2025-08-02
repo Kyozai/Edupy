@@ -19,6 +19,59 @@
   <li>データ分析・前処理・可視化の下準備に最適</li>
 </ul>
 
+<h2>PandasのDataFrame（データフレーム）の作成</h2>
+<p><strong>DataFrame</strong>とは、Pandasで扱う基本的な表形式のデータ構造です。</p>
+<p>行と列を持ち、Excelのようにラベル付きでデータを管理できます。</p>
+
+<h3>基本のDataFrame作成（辞書から）</h3>
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) 
+(3) data = {
+(4)     '名前': ['太郎', '花子', '次郎'],
+(5)     '年齢': [23, 25, 22],
+(6)     '出身地': ['東京', '大阪', '福岡']
+(7) }
+(8) 
+(9) df = pd.DataFrame(data)
+(10) print(df)</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h4>🖨️ 出力例：</h4>
+<pre style="background-color: #f7f7f8; padding: 8px; border-radius: 4px;">
+   名前  年齢  出身地
+0  太郎   23   東京
+1  花子   25   大阪
+2  次郎   22   福岡
+</pre>
+
+<h3>列の順序を指定して作成</h3>
+<pre style="background-color: #f7f7f8; padding: 8px; border-radius: 4px;">
+df = pd.DataFrame(data, columns=['名前', '出身地', '年齢'])
+</pre>
+
+<h3>行ラベル（インデックス）を指定して作成</h3>
+<pre style="background-color: #f7f7f8; padding: 8px; border-radius: 4px;">
+df = pd.DataFrame(data, index=['a', 'b', 'c'])
+</pre>
+
+
+
 
   
   <a href="index.html">トップページに戻る</a>
