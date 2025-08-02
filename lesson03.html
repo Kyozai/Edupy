@@ -404,8 +404,46 @@ df = pd.DataFrame(data, index=['a', 'b', 'c'])
   </tr>
 </table>
 
-
-
+ <!--------------------------------------------------------------------------------------->
+<h1><ul><li>describe() の基本的な使い方</li></ul></h1>
+ <!--------------------------------------------------------------------------------------->       
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) 
+(3) df = pd.DataFrame({
+(4)     '名前': ['太郎', '花子', '次郎'],
+(5)     '国語': [80, 90, 85],
+(6)     '数学': [70, 88, 82],
+(7)     '英語': [75, 95, 80]
+(8) })
+(9) 
+(10) print(df.describe())
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+             国語        数学        英語
+count   3.000000   3.000000   3.000000
+mean   85.000000  80.000000  83.333333
+std     5.000000   9.849155  10.408330
+min    80.000000  70.000000  75.000000
+25%    82.500000  76.000000  77.500000
+50%    85.000000  82.000000  80.000000
+75%    87.500000  85.000000  87.500000
+max    90.000000  88.000000  95.000000
+  
   
 
   
