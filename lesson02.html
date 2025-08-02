@@ -245,7 +245,112 @@
     </td>
   </tr>
 </table>
-  
+
+
+
+<!--------------------------------------------------------------------------------------->
+ <ul><li>配列の形状変更（reshape / ravel / flatten）</li></ul>
+  　　　<br>
+<!--------------------------------------------------------------------------------------->
+<!-- reshapeを使って1次元→2次元 -->
+<h3>reshape：1次元配列を2次元に変形</h3>
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np                 # NumPyライブラリを読み込む
+(2) 
+(3) a = np.array([1, 2, 3, 4, 5, 6])   # 1次元配列（要素6つ）を作成
+(4) 
+(5) b = a.reshape((2, 3))              # 2行3列に変形
+(6) print(b)                           # [[1 2 3]
+(7)                                    #  [4 5 6]]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- ravel -->
+<h3>ravel：多次元配列を1次元に（元のデータとメモリ共有）</h3>
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(8) print(b.ravel())                   # 出力: [1 2 3 4 5 6]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- flatten -->
+<h3>flatten：多次元配列を1次元に（コピーとして新しい配列を作る）</h3>
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(9) print(b.flatten())                # 出力: [1 2 3 4 5 6]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- reshape -1 自動整形 -->
+<h3>reshape(-1, n)：行数を自動で調整してn列に変形</h3>
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        width: 100%;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(10) c = a.reshape(-1, 2)              # 2列で行数を自動計算（3行2列）
+(11) print(c)                          # [[1 2]
+(12)                                   #  [3 4]
+(13)                                   #  [5 6]]
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
 <!--
   <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0;">
   <tr>
