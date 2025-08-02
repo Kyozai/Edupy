@@ -101,8 +101,83 @@ df = pd.DataFrame(data, index=['a', 'b', 'c'])
   </tr>
 </table>
 
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>1列だけ選ぶ（Series型で取得）</li></ul>
+ <!--------------------------------------------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) 
+(3) df = pd.DataFrame({
+(4)     '名前': ['太郎', '花子', '次郎'],
+(5)     '年齢': [23, 25, 22],
+(6)     '出身地': ['東京', '大阪', '福岡']
+(7) })
+(8) 
+(9) print(df['名前'])  # 1列だけ（Series型で返る）
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>複数の列を選ぶ（DataFrame型で取得）</li></ul>
+ <!--------------------------------------------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) print(df[['名前', '年齢']])  # 複数列（DataFrame型で返る）
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+
+  <!--------------------------------------------------------------------------------------->
+<h1><ul><li>新しい列を追加する</li></ul>
+ <!--------------------------------------------------------------------------------------->
+  <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) df['得点'] = [80, 90, 85]  # 新しい列「得点」を追加
+(2) print(df)                # 結果を表示
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
 
 
+  
 
   
 
