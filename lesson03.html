@@ -827,7 +827,46 @@ C     95.0  85.0</pre>
   </table>
 </td>
 
-
+<!--------------------------------------------------------------------------------------->
+ <ul><li><h1>日付型のデータ（datetime型）</li></ul>
+<!---------------------------------------------------------------------------------------> 
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) 
+(3) # 日付データの作成（文字列からdatetime型へ変換）
+(4) df = pd.DataFrame({
+(5)     '日付': ['2023-01-01', '2023-02-15', '2023-03-20'],
+(6)     '売上': [1000, 1500, 1300]
+(7) })
+(8) 
+(9) # 文字列をdatetime型に変換
+(10) df['日付'] = pd.to_datetime(df['日付'])
+(11) 
+(12) print(df)
+(13) print(df.dtypes)  # データ型の確認
+(14)
+(15) # 日付から「年」「月」「日」の情報を取り出す例
+(16) df['年'] = df['日付'].dt.year
+(17) df['月'] = df['日付'].dt.month
+(18) df['日'] = df['日付'].dt.day
+(19) 
+(20) print(df)
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
 
   
   
