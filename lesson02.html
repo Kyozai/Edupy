@@ -465,9 +465,69 @@
 </td></tr>
 </table>
 
+ <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>ランダム配列</li></ul>
+<!---------------------------------------------------------------------------------------> 
+<!--------------------------------------------------------------------------------------->
+ <ul><li>NumPy では、乱数（ランダムな値）を使った配列の作成が簡単にできます。</li></ul>
+ <br><br>
+<!--------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li> 0〜1の乱数（浮動小数点）</li></ul>
+ <!--------------------------------------------------------------------------------------->  
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) import numpy as np
+(2) 
+(3) rand_array = np.random.rand(3, 2)  # 3行2列のランダムな浮動小数点数
+(4) print(rand_array)
+</code></pre>
+</div>
+</td></tr>
+</table>
 
+<!--------------------------------------------------------------------------------------->
+<h1><ul><li>整数のランダム配列</li></ul>
+ <!--------------------------------------------------------------------------------------->  
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) int_array = np.random.randint(1, 10, size=(2, 4))  # 1〜9の整数を2行4列で生成
+(2) print(int_array)
+</code></pre>
+</div>
+</td></tr>
+</table>
 
+ <!--------------------------------------------------------------------------------------->
+<h1><ul><li>標準正規分布に従う乱数</li></ul>
+ <!--------------------------------------------------------------------------------------->   
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) normal_array = np.random.randn(4)  # 平均0, 標準偏差1の正規分布に従う4つの値
+(2) print(normal_array)
+</code></pre>
+</div>
+</td></tr>
+</table>
 
+ <!--------------------------------------------------------------------------------------->
+<h1><ul><li>再現性のある乱数</li></ul>
+ <!--------------------------------------------------------------------------------------->   
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 800px; margin: auto;">
+<tr><td>
+<div style="background-color: #f7f7f8; color: #333; font-family: monospace; font-size: 16px; line-height: 1.5; padding: 12px; border-radius: 6px; width: 100%; overflow: auto;">
+<pre style="margin: 0;"><code>(1) np.random.seed(42)  # 同じ乱数列を得たいときに固定
+(2) print(np.random.rand(2))
+</code></pre>
+</div>
+</td></tr>
+</table>
+
+    
+  
   
   
   
