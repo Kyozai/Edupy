@@ -255,8 +255,40 @@ df = pd.DataFrame(data, index=['a', 'b', 'c'])
   </tr>
 </table>
 
-  
+ <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>データの基本情報を確認する方法（DataFrameの構造や統計）</li></ul>
+<!---------------------------------------------------------------------------------------> 
+   <!--------------------------------------------------------------------------------------->
+<h1><ul><li>.info()：列ごとの型や欠損の有無を確認</li></ul></h1>
+ <!--------------------------------------------------------------------------------------->   
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) 
+(3) df = pd.DataFrame({
+(4)     '名前': ['太郎', '花子', '次郎'],
+(5)     '年齢': [23, 25, 22],
+(6)     '出身地': ['東京', '大阪', '福岡']
+(7) })
+(8) 
+(9) df.info()  # 列のデータ型や非null数などを確認
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
 
+  
   
   
 
