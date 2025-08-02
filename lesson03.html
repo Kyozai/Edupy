@@ -344,9 +344,69 @@ df = pd.DataFrame(data, index=['a', 'b', 'c'])
   </tr>
 </table>
 
-  
-  
+ <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>pandas による「列の合計・平均・分散・標準偏差」</li></ul>
+<!---------------------------------------------------------------------------------------> 
+ <!--------------------------------------------------------------------------------------->
+<h1><ul><li>列ごとの合計・平均・分散・標準偏差を求める</li></ul></h1>
+ <!--------------------------------------------------------------------------------------->       
+  <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import pandas as pd
+(2) 
+(3) df = pd.DataFrame({
+(4)     '名前': ['太郎', '花子', '次郎'],
+(5)     '国語': [80, 90, 85],
+(6)     '数学': [70, 88, 82],
+(7)     '英語': [75, 95, 80]
+(8) })
+(9) 
+(10) print(df[['国語', '数学', '英語']].sum())   # 各列の合計
+(11) print(df[['国語', '数学', '英語']].mean())  # 各列の平均
+(12) print(df[['国語', '数学', '英語']].var())   # 各列の分散
+(13) print(df[['国語', '数学', '英語']].std())   # 各列の標準偏差
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
+ <!--------------------------------------------------------------------------------------->
+<h1><ul><li>行ごとの合計・平均も可能</li></ul></h1>
+ <!--------------------------------------------------------------------------------------->       
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px; margin: auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) df['合計'] = df[['国語', '数学', '英語']].sum(axis=1)
+(2) df['平均'] = df[['国語', '数学', '英語']].mean(axis=1)
+(3) print(df)
+</code></pre>
+      </div>
+    </td>
+  </tr>
+</table>
 
+
+
+  
 
   
   <a href="index.html">トップページに戻る</a>
