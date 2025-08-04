@@ -21,7 +21,9 @@
   </ul>
 </div>
 
-
+  <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>折れ線グラフの作成</li></ul>
+<!---------------------------------------------------------------------------------------> 
   <table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px;">
   <tr>
     <td>
@@ -40,8 +42,8 @@
 (4)
 (5) # データ作成
 (6) df = pd.DataFrame({
-(7)     '日付': pd.date_range('2025-01-01', periods=7),
-(8)     '売上': [120, 130, 125, 145, 150, 160, 170]
+(7)     'date': pd.date_range('2025-01-01', periods=7),
+(8)     'sales': [120, 130, 125, 145, 150, 160, 170]
 (9) })
 (10)
 (11) # スタイル設定
@@ -49,16 +51,13 @@
 (13)
 (14) # 折れ線グラフの描画
 (15) plt.figure(figsize=(9, 5))
-(16) sns.lineplot(x='日付', y='売上', data=df,
-(17)              marker='o', color='blue', label='売上推移')
+(16) sns.lineplot(x='date', y='sales', data=df,
+(17)              marker='o', color='blue')
 (18)
 (19) plt.title('日別売上の推移（Seaborn）')
 (20) plt.xlabel('日付')
 (21) plt.ylabel('売上（万円）')
-(22) plt.xticks(rotation=45)
-(23) plt.tight_layout()
-(24) plt.legend()
-(25) plt.show()
+(22) plt.show()
 </code></pre>
       </div>
     </td>
@@ -67,6 +66,8 @@
     <td style="background:#fff; padding: 12px; font-family: monospace; font-size: 16px; border-radius: 0 0 6px 6px; border: 1px solid #ddd; border-top: none;">
       <strong>実行結果：</strong><br><br>
       <pre style="margin: 0;">
+
+        
 ・日別売上をSeabornで折れ線グラフとして表示
 ・マーカー付き（○）、青い実線
 ・x軸は日付、y軸は売上（万円）
