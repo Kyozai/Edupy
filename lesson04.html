@@ -186,6 +186,66 @@
   <img src="graph03.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
 </div>
 
+ <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>散布図の作成</li></ul>
+<!---------------------------------------------------------------------------------------> 
+
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 12px;
+        border-radius: 6px 6px 0 0;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import matplotlib.pyplot as plt
+(2) import pandas as pd
+(3)
+(4) # データ作成（10人分）
+(5) df = pd.DataFrame({
+(6)     '名前': ['太郎', '花子', '次郎', '三郎', '美咲', '健一', '由紀', '翔太', '陽菜', '直人'],
+(7)     '年齢': [23, 25, 22, 24, 21, 23, 24, 22, 25, 23],
+(8)     '得点': [88, 92, 85, 90, 95, 84, 89, 91, 87, 93]
+(9) })
+(10)
+(11) # 棒グラフ描画
+(12) plt.figure(figsize=(10, 6))
+(13) plt.bar(df['名前'], df['得点'], color='skyblue')
+(14) plt.title('生徒の得点（棒グラフ）')
+(15) plt.xlabel('名前')
+(16) plt.ylabel('得点')
+(17) plt.grid(axis='y')
+(18)
+(19) plt.tight_layout()
+(20) plt.show()
+</code></pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="background:#fff; padding: 12px; font-family: monospace; font-size: 16px; border-radius: 0 0 6px 6px; border: 1px solid #ddd; border-top: none;">
+      <strong>実行結果：</strong><br><br>
+      <pre style="margin: 0;">
+<div style="margin-top: 12px;">
+  <img src="graph04.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+        
+
+・X軸：名前（太郎〜直人の10名）
+・Y軸：得点（80〜100の範囲）
+・水色の棒グラフで、得点の高さを可視化
+・タイトル：生徒の得点（棒グラフ）
+・Y軸方向のグリッド線あり
+      </pre>
+    </td>
+  </tr>
+</table>
+
+        
 
   
 
