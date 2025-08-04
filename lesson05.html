@@ -208,25 +208,23 @@
 (3) import pandas as pd
 (4) import numpy as np
 (5) # データ生成（身長と体重の関係）
-(6) np.random.seed(1)
-(7) 身長 = np.array([168.2, 172.1, 159.2, 177.4, 153.1, 171.2, 173.3, 149.4, 148.7, 158.3])
-(8) 身長_m = 身長 / 100  # 身長(m)
-(9) BMI = np.array([19.82, 22.24, 20.55, 22.23, 21.45, 21.36, 24.64, 20.04, 23.08, 23.87])
-(10) 体重 = np.round(BMI * 身長_m**2, 1)  # 体重（kg）
-(11) # DataFrameにまとめる
-(12) df = pd.DataFrame({
-(13)     'height': 身長,
-(14)     'BMI': BMI,
-(15)     'weight': 体重
-(16) })
-(17) # スタイル設定
-(18) sns.set(style="whitegrid")
-(19) # 散布図の描画
-(20) plt.figure(figsize=(8, 5))
-(21) sns.scatterplot(x='height', y='weight', data=df, marker='o')
-(22) plt.xlabel('height')
-(23) plt.ylabel('weight')
-(24) plt.show()
+(6) 身長 = np.array([168.2, 172.1, 159.2, 177.4, 153.1, 171.2, 173.3, 149.4, 148.7, 158.3])
+(7) 身長_m = 身長 / 100  # 身長(m)
+(8) BMI = np.array([19.82, 22.24, 20.55, 22.23, 21.45, 21.36, 24.64, 20.04, 23.08, 23.87])
+(9) 体重 = np.round(BMI * 身長_m**2, 1)  # 体重（kg）
+(10) # DataFrameにまとめる
+(11) df = pd.DataFrame({
+(12)     'height': 身長,
+(13)     'BMI': BMI,
+(14)     'weight': 体重
+(15) })
+(16) # スタイル設定
+(17) sns.set(style="whitegrid")
+(18) # 散布図の描画
+(19) plt.figure(figsize=(8, 5))
+(20) sns.scatterplot(x='height', y='weight', data=df, marker='o')(22) plt.xlabel('height')
+(21) plt.ylabel('weight')
+(22) plt.show()
 </code></pre>
       </div>
     </td>
