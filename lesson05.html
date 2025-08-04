@@ -78,7 +78,61 @@
   </tr>
 </table>
 
+ <!--------------------------------------------------------------------------------------->
+ <ul><li><h1>棒グラフの作成</li></ul></h1>
+<!---------------------------------------------------------------------------------------> 
+  
+<table border="0" cellspacing="0" cellpadding="0" style="background-color: #f0f0f0; width: 100%; max-width: 800px;">
+  <tr>
+    <td>
+      <div style="
+        background-color: #f7f7f8;
+        color: #333;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 12px;
+        border-radius: 6px 6px 0 0;
+        overflow: auto;">
+<pre style="margin: 0;"><code>(1) import seaborn as sns
+(2) import matplotlib.pyplot as plt
+(3) import pandas as pd
+(4)
+(5) # データ作成
+(6) df = pd.DataFrame({
+(7)     'category': ['A', 'B', 'C', 'D', 'E'],
+(8)     'sales': [100, 150, 90, 130, 120]
+(9) })
+(10)
+(11) # スタイル設定
+(12) sns.set(style="whitegrid")
+(13)
+(14) # 棒グラフの描画
+(15) plt.figure(figsize=(9, 5))
+(16) sns.barplot(x='カテゴリ', y='売上', data=df)
+(17)
+(18) plt.xlabel('category')
+(19) plt.ylabel('sales')
+(20) plt.show()
+</code></pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="background:#fff; padding: 12px; font-family: monospace; font-size: 16px; border-radius: 0 0 6px 6px; border: 1px solid #ddd; border-top: none;">
+      <strong>実行結果：</strong><br><br>
+      <pre style="margin: 0;">
 
+ <div style="margin-top: 12px;">
+  <img src="graph08.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+・カテゴリ別の売上をSeabornで棒グラフ表示
+・x軸はカテゴリ、y軸は売上
+・白背景グリッド
+      </pre>
+    </td>
+  </tr>
+</table>
 
 
 
