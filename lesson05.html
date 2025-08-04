@@ -250,10 +250,136 @@
     </td>
   </tr>
 </table>
+<!--------------------------------------------------------------------------------------->
+ <ul><li><h1>箱ひげ図の作成</li></ul></h1>
+<!---------------------------------------------------------------------------------------> 
+  <table border="0" cellspacing="0" cellpadding="0" style="background-color:#f0f0f0; width:100%; max-width:800px; margin:20px auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color:#f7f7f8;
+        color:#333;
+        font-family: monospace;
+        font-size:16px;
+        line-height:1.6;
+        padding:12px;
+        border-radius:6px 6px 0 0;
+        overflow-x:auto;
+        white-space: pre-wrap;">
+<pre style="margin:0;"><code>(1) import seaborn as sns
+(2) import matplotlib.pyplot as plt
+(3) import pandas as pd
+(5) # データ作成（科目別の点数）
+(6) df = pd.DataFrame({
+(7)     'Japanese': [72, 88, 91, 65, 77, 83, 69, 85, 90, 75],
+(8)     'Mathematic': [60, 62, 58, 70, 65, 72, 66, 68, 75, 64],
+(9)     'English': [25, 80, 89, 78, 82, 87, 90, 83, 79, 88]
+(10) })
+(11) # データを縦長に変換（seaborn用）
+(12) df_melted = df.melt(var_name='subject', value_name='score')
+
+(13) # 箱ひげ図の描画
+(14) plt.figure(figsize=(8, 5))
+(15) sns.boxplot(x='subject', y='score', data=df_melted)
+
+(17) plt.xlabel('subject')
+(18) plt.ylabel('score')
+(19) plt.tight_layout()
+(20) plt.show()
+</code></pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="
+      background:#fff;
+      padding:12px;
+      font-family: monospace;
+      font-size:16px;
+      border-radius:0 0 6px 6px;
+      border:1px solid #ddd;
+      border-top:none;">
+      <strong>実行結果：</strong><br><br>
+      <pre style="margin:0;">
+        <div style="margin-top: 12px;">
+  <img src="graph11.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>       
+・国語・数学・英語の点数分布を箱ひげ図で可視化
+・箱の範囲は四分位範囲（25〜75%）、中央線は中央値
+・外れ値（離れている点）がある場合も表示
+      </pre>
+    </td>
+  </tr>
+</table>
+
+<!--------------------------------------------------------------------------------------->
+ <ul><li><h1>ヒートマップの作成</li></ul></h1>
+<!---------------------------------------------------------------------------------------> 
+<table border="0" cellspacing="0" cellpadding="0" style="background-color:#f0f0f0; width:100%; max-width:800px; margin:20px auto;">
+  <tr>
+    <td>
+      <div style="
+        background-color:#f7f7f8;
+        color:#333;
+        font-family: monospace;
+        font-size:16px;
+        line-height:1.6;
+        padding:12px;
+        border-radius:6px 6px 0 0;
+        overflow-x:auto;
+        white-space: pre-wrap;">
+<pre style="margin:0;"><code>(1) import seaborn as sns
+(2) import matplotlib.pyplot as plt
+(3) import pandas as pd
+(4) # サンプルデータ作成（各教科の点数）
+(5) df = pd.DataFrame({
+(6)     'Japanese': [70, 82, 91, 65, 77, 83, 69, 85, 90, 75],
+(7)     'Mathematic': [68, 62, 58, 70, 65, 72, 66, 68, 75, 64],
+(8)     'English': [85, 80, 89, 78, 82, 87, 90, 83, 79, 88],
+(9)    'Science': [72, 75, 70, 68, 77, 76, 73, 78, 80, 74],
+(10)    'Social': [88, 85, 83, 90, 89, 92, 87, 91, 86, 84]
+(11) })
+(12) # 相関係数の算出
+(13) corr = df.corr()
+(14) # ヒートマップの描画
+(15) plt.figure(figsize=(8, 6))
+(16) sns.heatmap(corr, annot=True, cmap='coolwarm', square=True, fmt=".2f", linewidths=0.5)
+(17) plt.title('教科間の相関係数ヒートマップ')
+(18) plt.tight_layout()
+(19) plt.show()
+</code></pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="
+      background:#fff;
+      padding:12px;
+      font-family: monospace;
+      font-size:16px;
+      border-radius:0 0 6px 6px;
+      border:1px solid #ddd;
+      border-top:none;">
+      <strong>実行結果：</strong><br><br>
+      <pre style="margin:0;">
+<div style="margin-top: 12px;">
+  <img src="graph12.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+</div>       
+・各教科の相関関係をヒートマップで可視化  
+・値は相関係数（-1〜+1）、色は coolwarm カラーマップ  
+・annot=True で数値をマス内に表示  
+・日本語ラベルも可視化（japanize_matplotlib）  
+      </pre>
+    </td>
+  </tr>
+</table>
 
 
 
 
+
+
+  
   
     <a href="index.html">トップページに戻る</a>
   <br>
