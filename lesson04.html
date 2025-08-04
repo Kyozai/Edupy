@@ -163,15 +163,17 @@
 (8)     '得点': [88, 92, 85, 90]
 (9) })
 (10)
-(11) # 棒グラフ描画
+(11) # ヒストグラム描画
 (12) plt.figure(figsize=(8, 5))
-(13) plt.bar(df['名前'], df['得点'], color='skyblue')
-(14) plt.title('生徒の得点（棒グラフ）')
-(15) plt.xlabel('名前')
-(16) plt.ylabel('得点')
+(13) plt.hist(df['得点'], bins=5, color='lightgreen', edgecolor='black')
+(14) plt.title('得点のヒストグラム')
+(15) plt.xlabel('得点')
+(16) plt.ylabel('人数（度数）')
 (17) plt.grid(axis='y')
 (18)
-(19) plt.show()
+(19) # 画像保存
+(20) plt.savefig('histogram.png')
+(21) plt.close()
 </code></pre>
       </div>
     </td>
@@ -183,16 +185,20 @@
 <div style="margin-top: 12px;">
   <img src="graph03.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
 </div>
-
-・X軸：名前（太郎, 花子, 次郎, 三郎）
-・Y軸：得点（85〜92の範囲）
-・水色の棒グラフで、得点の高さを可視化
-・タイトル：生徒の得点（棒グラフ）
+・得点を5区間に分けたヒストグラム
+・横軸：得点の区間
+・縦軸：人数（度数）
+・緑色の棒で度数を表現
+・タイトル：得点のヒストグラム
 ・Y軸方向のグリッド線あり
       </pre>
+      <div style="margin-top: 12px;">
+        <img src="histogram.png" alt="ヒストグラム" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
     </td>
   </tr>
 </table>
+
 
 
   
