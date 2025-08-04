@@ -275,7 +275,7 @@
 (9)
 (10) # 箱ひげ図描画
 (11) plt.figure(figsize=(8, 6))
-(12) plt.boxplot(df['得点'], patch_artist=True, boxprops=dict(facecolor='lightblue'))
+(12) plt.boxplot(df['得点'])
 (13) plt.title('生徒の得点の箱ひげ図')
 (14) plt.ylabel('得点')
 (15) plt.grid(axis='y')
@@ -292,10 +292,9 @@
 <div style="margin-top: 12px;">
   <img src="graph05.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
 </div>
-        
+  
 
 ・Y軸：得点（80〜100の範囲）
-・箱（四分位範囲）が水色で塗りつぶされている
 ・中央値は箱の中の線で示される
 ・ひげはデータの範囲を表す
 ・タイトル：生徒の得点の箱ひげ図
