@@ -40,25 +40,24 @@
 (3)
 (4) # データ作成
 (5) df = pd.DataFrame({
-(6)     '名前': ['太郎', '花子', '次郎', '三郎'],
-(7)     '年齢': [23, 25, 22, 24],
-(8)     '得点': [88, 92, 85, 90]
-(9) })
-(10)
-(11) # 折れ線グラフ描画
-(12) plt.figure(figsize=(8, 5))
-(13) plt.plot(df['名前'], df['得点'], marker='o', linestyle='-', color='blue')
-(14)
-(15) # タイトルと軸ラベル
-(16) plt.title('生徒の得点推移')
-(17) plt.xlabel('名前')
-(18) plt.ylabel('得点')
-(19)
-(20) # グリッド表示
-(21) plt.grid(True)
-(22)
-(23) # グラフの表示
-(24) plt.show()
+(6)     '名前': ['太郎', '花子', '次郎', '三郎', '美咲', '健一', '陽菜', '大輔', '葵', '涼介'],
+(7)     '得点': [88, 92, 85, 90, 87, 91, 86, 89, 90, 88]
+(8) })
+(9)
+(10) # 折れ線グラフ描画
+(11) plt.figure(figsize=(8, 5))
+(12) plt.plot(df['名前'], df['得点'], marker='o', linestyle='-', color='blue')
+(13)
+(14) # タイトルと軸ラベル
+(15) plt.title('生徒の得点推移')
+(16) plt.xlabel('名前')
+(17) plt.ylabel('得点')
+(18)
+(19) # グリッド表示
+(20) plt.grid(True)
+(21)
+(22) # グラフの表示
+(23) plt.show()
 </code></pre>
       </div>
     </td>
@@ -68,7 +67,7 @@
       <strong>実行結果：</strong><br><br>
       <pre style="margin: 0;">
 <div style="margin-top: 12px;">
-  <img src="graph01.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+  <img src="graph03.jpg" alt="得点グラフ" style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
 </div>
 
 ・X軸：名前（太郎, 花子, 次郎, 三郎）
