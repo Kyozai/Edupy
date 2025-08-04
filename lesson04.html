@@ -215,16 +215,12 @@
 (12) plt.figure(figsize=(10, 6))
 (13) plt.scatter(df['国語'], df['数学'], color='blue', marker='o')
 (14)
-(15) # 各点に名前ラベルを付ける
-(16) for i in range(len(df)):
-(17)     plt.text(df['国語'][i] + 0.3, df['数学'][i] + 0.3, df['名前'][i], fontsize=9)
-(18)
-(19) plt.title('国語と数学の得点の散布図')
-(20) plt.xlabel('国語の得点')
-(21) plt.ylabel('数学の得点')
-(22) plt.grid(True)
-(23) plt.tight_layout()
-(24) plt.show()
+(15) plt.title('国語と数学の得点の散布図')
+(16) plt.xlabel('国語の得点')
+(17) plt.ylabel('数学の得点')
+(18) plt.grid(True)
+(19) plt.tight_layout()
+(20) plt.show()
 </code></pre>
       </div>
     </td>
